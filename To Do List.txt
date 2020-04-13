@@ -1,0 +1,3 @@
+Create a better design 
+Add a navigation bar and a main home page which will lead to the assessment page.
+E-mail and user info page.

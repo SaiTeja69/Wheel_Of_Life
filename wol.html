@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheel Of Life</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/inputRangeStyle.css">
+  <script>
+    const adjustScale = (diagramId) => {
+      let rotate = 0;
+      switch (diagramId) {
+        case "finance":
+          rotate = 45;
+          break;
+        case "personalGrowth":
+          rotate = 90;
+          break;
+        case "health":
+          rotate = 135;
+          break;
+        case "family":
+          rotate = 180;
+          break;
+        case "relationships":
+          rotate = 225;
+          break;
+        case "socialLife":
+          rotate = 270;
+          break;
+        case "attitude":
+          rotate = 315;
+          break;
+        default:
+          rotate = 0;
+          break;
+      }
+
+      const inputId = "input" + diagramId.charAt(0).toUpperCase() + diagramId.slice(1);
+      const vote = document.getElementById(inputId).value;
+      const scale = Number.parseFloat(vote) + 0.02;
+      console.log(scale);
+      document.getElementById(diagramId).style = "transform: rotate(" + rotate + "deg) scale(" + scale + ", " + scale + ")";
+    }
+    window.onload = () => {
+      const career = 6;
+      const finance = 4;
+      const personalGrowth = 5;
+      const health = 6;
+      const famliy = 8;
+      const relationships = 6;
+      const socialLife = 5;
+      const attitude = 4;
+    }
+
+  </script>
+</head>
+
+<body>
+  <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="index.html">Wheel Of Life</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="wol.html">Assessment</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="">Suscribe</a>
+      </li>
+  </ul>
+</div>
+</nav>
+  <div id="wheelOfLife">
+    <div id="career" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="finance" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="personalGrowth" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="health" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="family" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="relationships" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="socialLife" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+    <div id="attitude" class="triangle">
+      <svg viewBox="0 0 110.5 155.5">
+        <path d="M0 45.5L110.5 0v155.5L0 45.5z"/>
+      </svg>
+    </div>
+  </div>
+  <h1>Finances</h1>
+  <input id="inputFinance" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('finance')" />
+  <h1>Personal Growth</h1>
+  <input id="inputPersonalGrowth" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('personalGrowth')" />
+  <h1>Health</h1>
+  <input id="inputHealth" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('health')" />
+  <h1>Family</h1>
+  <input id="inputFamily" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('family')" />
+  <h1>Relationships</h1>
+  <input id="inputRelationships" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('relationships')" />
+  <h1>Social Life</h1>
+  <input id="inputSocialLife" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('socialLife')" />
+  <h1>Attitude</h1>
+  <input id="inputAttitude" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('attitude')" />
+  <h1>Career</h1>
+  <input id="inputCareer" type="range" min="0.1" max="1" step="0.1" value="1" onchange="adjustScale('career')" />
+
+
+</body>
+
+</html>
